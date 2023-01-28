@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 mlp.code-workspace
 data/*.txt
+docs/secrets.md
