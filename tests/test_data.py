@@ -15,11 +15,12 @@ def test_data_generate_soap_notes_raises_type_error_when_junk_passed_in():
         data.generate_soap_notes("1")
     with pytest.raises(TypeError, match=error + "dict"):
         data.generate_soap_notes({"1":"1"})
+    with pytest.raises(TypeError, match=error + "list"):
+        data.generate_soap_notes([1])
 
 def test_data_generate_soap_notes_returns_a_list():
     assert isinstance(data.generate_soap_notes(1), list)
-'''
+
 def test_data_generate_soap_notes_returns_correct_number_of_notes_in_a_list():
     assert len(data.generate_soap_notes(1)) == 1
     assert len(data.generate_soap_notes(2)) == 2
-'''
