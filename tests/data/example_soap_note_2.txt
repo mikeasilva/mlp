@@ -1,0 +1,7 @@
+S: The patient has been having worsening sinus congestion and fevers for the past 14 days. They deny any shortness of breath. They have been having a cough as well with no shortness of breath. They have tried over the counter medication such as NyQuil and ibuprofen with minimal relief and no side effects.
+
+O: They deny any tenderness over the lymph nodes of the neck. They deny any white spots on the tonsils. There is no rash on the face. They deny neck stiffness with movement. Mood and behavior seem appropriate.
+
+A: This presentation is consistent with Acute sinusitis of bacterial etiology. The differential diagnosis includes viral sinusitis or Upper Respiratory Tract infection or allergic rhinitis.
+
+P: Based on symptoms I suspect acute bacterial sinusitis. Based on 2 weeks of symptoms and worsening will recommend a course of Augmentin 875 mg twice daily for 10 days. The patient should follow up with their own PCP after treatment. Return precautions were reviewed. Alternative management options were discussed. Medication side effects were also discussed. The patient is to follow-up with PCP immediately if symptoms worsen. The patient agrees with management.
