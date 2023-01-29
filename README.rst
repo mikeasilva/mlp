@@ -1,7 +1,7 @@
 Medical Language Processing
 ========================
 
-The MLP project sets out to aid computers to understand medical laguage.
+The MLP project sets out to aid computers to understand medical language.
 
 ---------------
 
