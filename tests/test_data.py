@@ -1,5 +1,5 @@
 import pytest
-from MLP import data
+from mlp import data
 
 def test_generate_soap_notes_raises_value_error_with_big_number():
     with pytest.raises(ValueError, match="Too many SOAP notes requested!"):
