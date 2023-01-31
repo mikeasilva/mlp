@@ -9,7 +9,18 @@ def test_generate_soap_notes_raises_value_error_with_negative_number():
     with pytest.raises(ValueError, match="Too few SOAP notes requested!"):
         data.generate_soap_notes(-1)
 
+def test_generate_soap_notes_patient_gender_acceptable_input():
+    # Should pass
+    data.generate_soap_notes(1, patient_gender = "male")
+    data.generate_soap_notes(1, patient_gender = "female")
+    data.generate_soap_notes(1, patient_gender = "MALE")
+    data.generate_soap_notes(1, patient_gender = "FEMALE")
+    # Should fail
+    with pytest.raises(ValueError, match="patient_gender not male or female. Received dog"):
+        data.generate_soap_notes(1, patient_gender = "dog")
+
 def test_generate_soap_notes_raises_type_error_when_junk_passed_in():
+    # Pass in invalid n
     error = "n must be an int. Received a "
     with pytest.raises(TypeError, match=error + "str"):
         data.generate_soap_notes("1")
@@ -19,6 +30,15 @@ def test_generate_soap_notes_raises_type_error_when_junk_passed_in():
         data.generate_soap_notes([1])
     with pytest.raises(TypeError, match=error + "float"):
         data.generate_soap_notes(1/2)
+
+    # Pass in invalid patient_gender
+    error = "patient_gender must be a str or None. Received a "
+    with pytest.raises(TypeError, match=error + "dict"):
+        data.generate_soap_notes(1, patient_gender = {"1":"1"})
+    with pytest.raises(TypeError, match=error + "list"):
+        data.generate_soap_notes(1, patient_gender = [1])
+    with pytest.raises(TypeError, match=error + "float"):
+        data.generate_soap_notes(1, patient_gender = 1/2)
 
     # Pass in invalid anonymize_patient
     error = "anonymize_patient must be a bool. Received a "
